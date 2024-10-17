@@ -27,7 +27,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'preservim/nerdcommenter'
-Plug 'junegunn/fzf.vim', { 'do': { -> fzf#install() } } 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } 
 
 call plug#end()
 
@@ -35,7 +35,7 @@ call plug#end()
 let g:nerdtree_tabs_open_on_console_startup=1
 
 " Plugins Keymap
-nnoremap <leader>n :NERDTreeToggle<CR>  " Toggle file tree with Leader+n
+nnoremap <leader>o :NERDTreeToggle<CR>  " Toggle file tree with Leader+n
 nnoremap <leader>f :Files<CR>  " Open fuzzy file search with Leader+f
 
 " # Custom Keymap
