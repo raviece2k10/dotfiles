@@ -34,8 +34,8 @@ call plug#end()
 " Plugins settings
 let g:nerdtree_tabs_open_on_console_startup=1
 
-" Plugins Keymap
-nnoremap <leader>o :NERDTreeToggle<CR>  " Toggle file tree with Leader+n
-nnoremap <leader>f :Files<CR>  " Open fuzzy file search with Leader+f
-
-" # Custom Keymap
+" # Custom Keymaps
+" Toggle nerd file tree with Leader+n
+nnoremap <leader>o :NERDTreeToggle<CR>
+" Open fuzzy file search with Leader+f
+nnoremap <leader>f :FZF ~<CR>
