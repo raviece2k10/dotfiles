@@ -16,7 +16,7 @@ alias lg='ls -A | grep'
 
 # pssh
 alias pssh='parallel-ssh'
-alias mpssh='parallel-ssh -i -x "-q -o StrictHostKeyChecking=no -o ConnectTimeout=10 -o LogLevel=ERROR"'
+alias mpssh='parallel-ssh -i -x "-q -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o ConnectTimeout=10 -o LogLevel=ERROR"'
 alias pscp='parallel-scp'
 alias prsync='parallel-rsync'
 alias pslurp='parallel-slurp'
