@@ -1,5 +1,5 @@
 # Path: ~/.bashrc
-# Purpose: config file for bash
+# Purpose: Config file for bash
 # Updated on: 16-10-2024
 
 # If not running interactively, don't do anything

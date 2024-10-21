@@ -1,6 +1,6 @@
-# Path: ~/.zprofile from my mac
-# Purpose: zsh profile config file
-# Updated on: 16-10-2024
+# Path: ~/.zprofile
+# Purpose: Default zsh config file at user login (from my mac)
+# Updated on: 21-10-2024
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 

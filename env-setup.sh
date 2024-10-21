@@ -1,7 +1,7 @@
 #!/bin/bash
-# Purpose: Setting your dev environment in the current dir (modify as per your requirement) 
+# Purpose: Getting custom dev environment ready in the current dir (modify as per your requirement) 
 # Updated By: Ravi Kr Singh
-# Updated On: 17-10-2024
+# Updated On: 21-10-2024
 echo
 echo "## Getting dev environment ready for ravi ..."
 
@@ -45,12 +45,12 @@ if [ "$dotfiles_input" == "y" ]; then
     cp dotfiles/bashrc ~/.bashrc
     cp dotfiles/bash_aliases ~/.bash_aliases
 else
-    echo "# WARNING: Dotfiles not updated, productivity might decrease."
+    echo "# WARNING: Dotfiles not updated, some functions or cmds may not work."
 fi
 echo
 
 # Get all Tools
-read -p "## Install all tools (vim,fzf etc.) [y or n]: " tools_input
+read -p "## Install/Update all tools (vim,fzf etc.) [y or n]: " tools_input
 if [ "$tools_input" == "y" ]; then
     # installing vim
     if ! vim --version >/dev/null 2>&1; then
@@ -62,8 +62,11 @@ if [ "$tools_input" == "y" ]; then
     fi
     # installing fzf
     if ! fzf --version >/dev/null 2>&1; then
-        git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-        ~/.fzf/install
+        if ! -f ~/.fzf; then
+            git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+            ~/.fzf/install
+        else
+            ~/.fzf/install
     fi
 else
     echo "# WARNING: Recommended tools not installed, productivity might decrease."
@@ -81,9 +84,11 @@ echo "# Success: Almost done.
 vim --version (should be greater than 8.0 for plugins to work)
 fzf --version
 > if any error, run 'source ~/.bashrc' manually and try again.
-> Also, add it to the ~/.bash_profile to load it at every login.
+> Also, modify ~/.bash_profile to load the config automatically at login.
 "
 sleep 3
+if [ -f "~/.bash_profile" ]; then
+    source ~/.bash_profile
 if [ -f "~/.bashrc" ]; then
     source ~/.bashrc
 fi

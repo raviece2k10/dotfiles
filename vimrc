@@ -1,3 +1,7 @@
+"# Path: ~/.vimrc
+"# Purpose: vim config file
+"# Updated on: 21-10-2024
+
 " # Interface Settings:
 set number              " Show line numbers
 "set relativenumber      " Show relative line numbers from the cursor
