@@ -2,8 +2,9 @@
 # Purpose: Getting custom dev environment ready in the current dir (modify as per your requirement) 
 # Updated By: Ravi Kr Singh
 # Updated On: 21-10-2024
+
 echo
-echo "## Getting dev environment ready for ravi ..."
+echo "## Getting dev environment ready for [$(hostname)] ..."
 
 # Installing git if not available
 if ! git --version >/dev/null 2>&1; then
@@ -67,6 +68,7 @@ if [ "$tools_input" == "y" ]; then
             ~/.fzf/install
         else
             ~/.fzf/install
+        fi
     fi
 else
     echo "# WARNING: Recommended tools not installed, productivity might decrease."
@@ -89,6 +91,7 @@ fzf --version
 sleep 3
 if [ -f "~/.bash_profile" ]; then
     source ~/.bash_profile
+fi
 if [ -f "~/.bashrc" ]; then
     source ~/.bashrc
 fi
