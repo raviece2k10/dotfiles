@@ -4,7 +4,7 @@
 # Updated On: 21-10-2024
 
 echo
-echo "## Getting dev environment ready for [$(hostname)] ..."
+echo "## Getting dev environment ready for [$(whoami)] ..."
 
 # Installing git if not available
 if ! git --version >/dev/null 2>&1; then
@@ -58,12 +58,12 @@ if [ "$tools_input" == "y" ]; then
         sudo apt install vim -y || sudo yum install vim -y
     fi
     # installing vim-plug
-    if [ ! -f "~/.vim/autoload/plug.vim" ]; then
+    if [ ! -f "$HOME/.vim/autoload/plug.vim" ]; then
         curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
     fi
     # installing fzf
     if ! fzf --version >/dev/null 2>&1; then
-        if ! -f ~/.fzf; then
+        if [ ! -f "$HOME/.fzf" ]; then
             git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
             ~/.fzf/install
         else
@@ -77,7 +77,7 @@ echo
 
 echo "# Success: Almost done. 
 
-# Last step is to enable vim plugins:
+# To enable vim plugins:
 > Open vim and type below command to install plugins.
 :PlugInstall<CR>
 > Close and re-open the vim for changes to take effect.
@@ -89,9 +89,8 @@ fzf --version
 > Also, modify ~/.bash_profile to load the config automatically at login.
 "
 sleep 3
-if [ -f "~/.bash_profile" ]; then
+if [ -f "$HOME/.bash_profile" ]; then
     source ~/.bash_profile
-fi
-if [ -f "~/.bashrc" ]; then
+elif [ -f "$HOME/.bashrc" ]; then
     source ~/.bashrc
 fi
