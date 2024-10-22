@@ -1,6 +1,6 @@
 # Path: ~/.bash_aliases
 # Purpose: Aliases file for bash
-# Updated on: 21-10-2024
+# Updated on: 22-10-2024
 
 # Function to add user defined aliases easily
 add_alias() {

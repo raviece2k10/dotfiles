@@ -1,6 +1,8 @@
 # Path: ~/.bash_profile
 # Purpose: Default bash config file at user login
-# Updated on: 21-10-2024
+# Updated on: 22-10-2024
+
+# NOTE: Add below to .bashrc instead of .bash_profile if bash is not the default shell at login (like in mac)
 
 # Get the aliases and functions
 if [ -f ~/.bashrc ]; then

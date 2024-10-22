@@ -1,6 +1,6 @@
 # Path: ~/.bashrc
 # Purpose: Config file for bash
-# Updated on: 16-10-2024
+# Updated on: 22-10-2024
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
