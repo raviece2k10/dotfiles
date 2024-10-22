@@ -70,3 +70,6 @@ fi
 #if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 #    . /etc/bash_completion
 #fi
+
+# Added by fzf pkg
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
