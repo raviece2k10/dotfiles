@@ -5,7 +5,7 @@
 # Function to add user defined aliases easily
 add_alias() {
     echo "alias $1='$2'" >> ~/.bash_aliases
-    source ~/.bash_aliases  # Reload .bash_aliases to make the alias effective immediately
+    source ~/.bash_aliases      # Reload .bash_aliases to make the alias effective immediately
 }
 
 ## ls
@@ -52,5 +52,4 @@ ff() {
             ls -A ~ | fzf  --preview 'cat {}'
             ;;
     esac
-# More functions to be added to open/preview files/dir.
 }
