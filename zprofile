@@ -1,6 +1,6 @@
 # ~/.zprofile (from mac)
-# Purpose: Default zsh config file at user login 
-# Updated on: 22-10-2024
+# Purpose: Default zsh config file at user login
+# Updated On: 22-10-2024
 
 ## For Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -14,7 +14,7 @@ export JAVA_HOME;
 #     export PATH="$PATH:$NODE"
 # fi
 
-## Get aliases and functions from zshrc file
+## Get other aliases and functions
 if [ -f ~/.zshrc ]; then
         source ~/.zshrc
 fi
