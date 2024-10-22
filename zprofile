@@ -1,5 +1,5 @@
-# ~/.zprofile
-# Purpose: Default zsh config file at user login (from mac)
+# ~/.zprofile (from mac)
+# Purpose: Default zsh config file at user login 
 # Updated on: 22-10-2024
 
 ## For Homebrew
