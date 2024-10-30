@@ -1,4 +1,4 @@
-# ~/.zprofile (from mac)
+# ~/.zprofile
 # Purpose: Default zsh config file at user login
 # Updated On: 22-10-2024
 

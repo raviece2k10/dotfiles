@@ -1,4 +1,4 @@
-# ~/.zshrc (from mac)
+# ~/.zshrc
 # Last Updated: 22-10-2024
 
 # Added by iterm2 app
